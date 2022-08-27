@@ -1,0 +1,58 @@
+### 3.1 Работа в терминале, лекция 1. ДЗ -- Миронюк Татьяна
+
+1. 'brew install virtualbox'
+
+2. 'brew install vagrant'
+
+3. iTerm; oh my zsh
+
+4. +
+
+5. Base memory: 1024 MB
+processors: 2
+Boot order: Hard disk, Optical
+Acceleration: VT-x/AMD-V, Nested Paging, PAE/NX, KVM, Paravirtualization
+
+6. customize
+
+'config.vm.provider "virtualbox" do |v|
+v.customize ["modifyvm", :id, "--cpuexecutioncap", "50"]
+end'
+
+'config.vm.provider "virtualbox" do |v|
+v.memory = 1024
+v.cpus = 2
+end'
+
+7. +
+
+8. HISTFILESIZE (1155) number if lines
+   HISTIZE (1178) number of commands
+   HISTCONTROL=ignoreboth	HISTCONTROL=ignorespace:ignoredups
+
+9. RESERVED WORDS (243)
+'{...}' - affects current shell, no subshell created, while (...) causes a subshell to be created and each of the commands in list to be executed in a subshell, variable assignments do not remain in effect after the subshell completes
+	- can be used as a function definition
+	- list, array to expand
+	- can be used to convert files
+
+10. 'touch {000001..100000}.txt'
+For 300000 'argument list is too long'
+
+11. CONDITIONAL EXPRESSIONS
+Checking if file exists and file is a directory
+
+12. 'vagrant@vagrant:~$ mkdir /tmp/new_path_directory
+vagrant@vagrant:~$ cp /usr/bin/bash /tmp/new_path_directory
+vagrant@vagrant:~$ PATH=/tmp/new_path_dir/:$PATH
+vagrant@vagrant:~$ type -a bash
+bash is /tmp/new_path_directory/bash
+bash is /usr/bin/bash
+bash is /bin/bash
+bash is /tmp/new_path_directory/bash
+bash is /tmp/new_path_directory/bash'
+
+13. batch – executes commands when system load levels permit
+at – executes commands at a specified time
+
+14. +
